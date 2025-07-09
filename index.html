@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TransOffice - Centro de Negócios do Porto</title>
+    <link rel="icon" sizes="192x192" href="transoffice-toplogo.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('bottomContactForm');
+    if (form) {
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const formData = new FormData(this);
+        fetch('contact_submit.php', {
+          method: 'POST',
+          body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+          alert(data.message);
+          if (data.status === 'success') {
+            this.reset();
+          }
+        })
+        .catch(error => {
+          alert('An error occurred. Please try again later.');
+          console.error('Error:', error);
+        });
+      });
+    }
+  });
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const select = document.getElementById('service_interest');
+      if (select) {
+        function updateColor() {
+          if (select.value === '') {
+            select.style.color = '#666666';
+          } else {
+            select.style.color = '#000000';
+          }
+        }
+        updateColor();
+        select.addEventListener('change', updateColor);
+      }
+    });
+  </script>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="transoffice-logo.avif" sizes="186x50" alt="TransOffice Logo" class="logo-img">
+            </div>
+            <div class="nav-links">
+                <a href="#home" data-translate="home">Home</a>
+                <a href="services.html" data-translate="services">Serviços</a>
+                <a href="spaces.html" data-translate="spaces">Espaços</a>
+                <a href="#about" data-translate="about">Sobre</a>
+                <a href="#contact" class="cta-button" data-translate="contact">Contacto</a>
+                <button class="language-toggle" id="languageToggle">EN</button>
+            </div>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1 data-translate="heroTitle">Impulsione o Seu Negócio com Espaços Profissionais</h1>
+            <p data-translate="heroSubtitle">Oferecemos toda a estrutura operacional e administrativa para o sucesso do seu negócio</p>
+            <div class="cta-buttons">
+                <a href="#contact" class="primary-button" data-translate="scheduleVisit">Agende uma Visita</a>
+                <a href="#services" class="secondary-button" data-translate="knowServices">Conheça Nossos Serviços</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 data-translate="ourServices">Nossos Serviços</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-building"></i>
+                    <h3 data-translate="officeSpaces">Espaços de Escritório</h3>
+                    <p data-translate="officesDesc">Escritórios modernos e totalmente equipados para suas necessidades profissionais.</p>
+                    <a href="http://localhost/spaces.html" class="learn-more" data-translate="learnMore">Saiba Mais</a>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-laptop-house"></i>
+                    <h3 data-translate="virtualOffices">Escritórios Virtuais</h3>
+                    <p data-translate="virtualDesc">Solução prática para empreendedores que não necessitam de espaço físico.</p>
+                    <a href="http://localhost/spaces.html" class="learn-more" data-translate="learnMore">Saiba Mais</a>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-users"></i>
+                    <h3 data-translate="coworking">Coworking</h3>
+                    <p data-translate="coworkingDesc">Ambiente dinâmico e estimulante para profissionais independentes.</p>
+                    <a href="http://localhost/spaces.html" class="learn-more" data-translate="learnMore">Saiba Mais</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <h2 data-translate="aboutTitle">Sobre a TransOffice</h2>
+                <p data-translate="aboutDesc">No coração do Porto, oferecemos soluções completas para empresas que buscam crescimento e profissionalismo. Nossa estrutura moderna e equipa dedicada garantem o suporte necessário para o sucesso do seu negócio.</p>
+                <div class="features">
+                    <div class="feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span data-translate="location">Localização Privilegiada</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span data-translate="infrastructure">Infraestrutura Completa</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span data-translate="support">Suporte Profissional</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 data-translate="testimonials">O Que Dizem Sobre Nós</h2>
+            <div class="testimonials-carousel">
+                <button class="carousel-arrow carousel-arrow-left" id="prevBtn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                
+                <div class="testimonials-wrapper">
+                    <div class="testimonial active">
+                        <div class="testimonial-content">
+                            <p data-translate="testimonial1">"Excelente estrutura e atendimento profissional. Recomendo!"</p>
+                            <div class="client-info">
+                                <span class="client-name" data-translate="client1Name">João Silva</span>
+                                <span class="client-position" data-translate="client1Position">Empresário</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p data-translate="testimonial2">"Trabalho com eles há 4 anos e sempre fui bem recebido. Instalações impecáveis!"</p>
+                            <div class="client-info">
+                                <span class="client-name" data-translate="client2Name">Maria Santos</span>
+                                <span class="client-position" data-translate="client2Position">Consultora</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p data-translate="testimonial3">"O espaço de coworking é fantástico. Ambiente profissional e networking excelente."</p>
+                            <div class="client-info">
+                                <span class="client-name" data-translate="client3Name">Pedro Costa</span>
+                                <span class="client-position" data-translate="client3Position">Freelancer</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p data-translate="testimonial4">"Serviços de escritório virtual de qualidade superior. Muito satisfeita!"</p>
+                            <div class="client-info">
+                                <span class="client-name" data-translate="client4Name">Ana Rodrigues</span>
+                                <span class="client-position" data-translate="client4Position">Advogada</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="carousel-arrow carousel-arrow-right" id="nextBtn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                
+                <div class="carousel-dots">
+                    <span class="dot active" data-slide="0"></span>
+                    <span class="dot" data-slide="1"></span>
+                    <span class="dot" data-slide="2"></span>
+                    <span class="dot" data-slide="3"></span>
+                </div>
+            </div>
+            
+            <!-- Google Reviews Section -->
+            <div class="google-reviews-section">
+                <div class="google-reviews-content">
+                    <p class="reviews-text" data-translate="seeMoreReviews">Veja mais avaliações no Google</p>
+                    <a href="https://www.google.com/search?sca_esv=4da7261d6af0beeb&rlz=1C1GCEA_enPT1092PT1092&tbm=lcl&sxsrf=AE3TifOKUAroTSAbT022R8d6fVaIJrss0g:1751465636109&q=Transoffice+-+Centro+de+Neg%C3%B3cios+Reviews&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxK2MDSyNLM0szAzNDQ1tjAyMTA13cDI-IpRM6QoMa84Py0tMzlVQVfBOTWvpChfISVVwS81_fDm5Mz8YoWg1LLM1PLiRazEqwUAf8AyfnIAAAA&rldimm=8129696861153824055&hl=en-PT&sa=X&ved=2ahUKEwjPnM74rZ6OAxVrKvsDHdoNNukQ9fQKegQIKxAF&biw=1920&bih=945&dpr=1#lkt=LocalPoiReviews" target="_blank" class="google-logo-link">
+                        <img src="google-logo.png" alt="Google Logo" class="google-logo">
+                        <span class="reviews-cta" data-translate="seeReviews">Ver Avaliações</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 data-translate="contactUs">Entre em Contacto</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <p>(+351) 224 073 235</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:info@transoffice.pt">
+                        <p>info@transoffice.pt</p>
+                        </a>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="address-info">
+                            <p>Rua Francisco Carqueja, 179, 3º Esq.</p>
+                            <p>4350-185 Porto, Portugal</p>
+                        </div>
+                    </div>
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3004.3392563778837!2d-8.629386323711392!3d41.15790797132426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd246528632c53e3%3A0x87403dd1e1148c89!2sR.%20Francisco%20Carqueja%20179%2C%204350-185%20Porto!5e0!3m2!1sen!2spt!4v1708615161010!5m2!1sen!2spt"
+                            width="100%" 
+                            height="200" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="TransOffice Location">
+                        </iframe>
+                    </div>
+                </div>
+                <form id="bottomContactForm" class="contact-form" action="contact_submit.php" method="POST">
+                    <input type="text" name="name" placeholder="Nome" data-translate-placeholder="name" required>
+                    <input type="email" name="email" placeholder="Email" data-translate-placeholder="email" required>
+                    <input type="tel" name="phone" placeholder="Telefone" data-translate-placeholder="phone">
+                    <select id="service_interest" name="service_interest" required>
+                        <option value="" disabled selected>Selecione uma opção</option>
+                        <option value="escritorios_privados">Escritórios Privados</option>
+                        <option value="coworking">Coworking</option>
+                        <option value="salas_reuniao">Salas de reunião</option>
+                        <option value="domiciliacao_fiscal">Domiciliação fiscal / Virtual Office</option>
+                    </select>
+                    <textarea name="message" placeholder="Mensagem" data-translate-placeholder="message" required></textarea>
+                    <button type="submit" class="primary-button" data-translate="send">Enviar Mensagem</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo-new">
+                    <a href="https://www.livroreclamacoes.pt/Inicio/">
+                    <img src="https://static.wixstatic.com/media/2d6ef6_a22621e8871d4c29998e5c40aff9c73a~mv2.png/v1/fill/w_84,h_35,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/livro-reclamacoes-120x50-b.png" alt="Livro Reclamacoes Logo" class="logo-img-new">
+                    </a>
+                </div>
+                <div class="footer-links">
+                    <a href="services.html" data-translate="services">Serviços</a>
+                    <a href="spaces.html" data-translate="spaces">Espaços</a>
+                    <a href="#about" data-translate="about">Sobre</a>
+                    <a href="#contact" data-translate="contact">Contacto</a>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/p/TransOffice-Centro-de-Neg%C3%B3cios-do-Porto-100063738020896/"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/company/transoffice-centro-de-neg%C3%B3cios-do-porto/"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-translate="rights">&copy; 2024 TransOffice. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

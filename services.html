@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços - TransOffice</title>
+    <link rel="icon" sizes="192x192" href="transoffice-toplogo.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="services.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="transoffice-logo.avif" sizes="186x50" alt="TransOffice Logo" class="logo-img">
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" data-translate="home">Home</a>
+                <a href="services.html" class="active" data-translate="services">Serviços</a>
+                <a href="spaces.html" data-translate="spaces">Espaços</a>
+                <a href="index.html#about" data-translate="about">Sobre</a>
+                <a href="index.html#contact" class="cta-button" data-translate="contact">Contacto</a>
+                <button class="language-toggle" id="languageToggle">EN</button>
+            </div>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="services-hero">
+        <div class="hero-particles"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 data-translate="servicesHeroTitle">Soluções Empresariais Completas</h1>
+                <p data-translate="servicesHeroSubtitle">Desde escritórios virtuais a serviços administrativos, temos tudo o que precisa para o sucesso do seu negócio</p>
+                <div class="hero-cta">
+                    <a href="#services-grid" class="primary-btn" data-translate="exploreServices">Explorar Serviços</a>
+                    <a href="#contact" class="secondary-btn" data-translate="getQuote">Pedir Orçamento</a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section id="services-grid" class="services-grid-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-translate="ourServicesTitle">Os Nossos Serviços</h2>
+                <p data-translate="servicesIntro">Oferecemos uma gama completa de serviços empresariais para apoiar o crescimento do seu negócio</p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Virtual Office -->
+                <div class="service-card premium" data-aos="fade-up">
+                    <div class="service-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="service-badge">Popular</div>
+                    <h3 data-translate="virtualOfficeTitle">Escritório Virtual</h3>
+                    <p data-translate="virtualOfficeDesc">Endereço comercial prestigioso no centro do Porto, com receção de correspondência e atendimento telefónico profissional.</p>
+                    <div class="service-features">
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span data-translate="virtualFeature1">Endereço comercial prestigioso</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span data-translate="virtualFeature2">Receção de correspondência</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span data-translate="virtualFeature3">Atendimento telefónico</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span data-translate="virtualFeature4">Sala de reuniões incluída</span>
+                        </div>
+                    </div>
+                    <div class="service-price">
+                        <span class="price-from" data-translate="fromPrice">A partir de</span>
+                        <span class="price-value">€99<span class="price-period">/mês</span></span>
+                    </div>
+                    <a href="#contact" class="service-btn" data-translate="learnMore">Saber Mais</a>
+                </div>
+
+                <!-- Business Address -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3 data-translate="businessAddressTitle">Endereço Comercial</h3>
+                    <p data-translate="businessAddressDesc">Utilize o nosso endereço prestigioso para a sua empresa, ideal para constituição de sociedades e registo comercial.</p>
+                    <div class="service-features">
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span data-translate="addressFeature1">Endereço para registo comercial</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span data-translate="addressFeature2">Receção de correspondência</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span data-translate="addressFeature3">Notificação imediata</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span data-translate="addressFeature4">Digitalização de documentos</span>
+                        </div>
+                    </div>
+                    <div class="service-price">
+                        <span class="price-from" data-translate="fromPrice">A partir de</span>
+                        <span class="price-value">€49<span class="price-period">/mês</span></span>
+                    </div>
+                    <a href="#contact" class="service-btn" data-translate="learnMore">Saber Mais</a>
+                </div>
+
+                <!-- Phone Services -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3 data-translate="phoneServicesTitle">Serviços Telefónicos</h3>
+                    <p data-translate="phoneServicesDesc">Atendimento telefónico profissional em nome da sua empresa, com transferência de chamadas e gestão de mensagens.</p>
+                    <div class="service-features">
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span data-translate="phoneFeature1">Atendimento personalizado</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span data-translate="phoneFeature2">Transferência de chamadas</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span data-translate="phoneFeature3">Gestão de mensagens</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span data-translate="phoneFeature4">Relatórios mensais</span>
+                        </div>
+                    </div>
+                    <div class="service-price">
+                        <span class="price-from" data-translate="fromPrice">A partir de</span>
+                        <span class="price-value">€79<span class="price-period">/mês</span></span>
+                    </div>
+                    <a href="#contact" class="service-btn" data-translate="learnMore">Saber Mais</a>
+                </div>
+
+                <!-- Administrative Services -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3 data-translate="adminServicesTitle">Serviços Administrativos</h3>
+                    <p data-translate="adminServicesDesc">Apoio administrativo completo para a sua empresa, desde gestão documental a apoio contabilístico.</p>
+                    <div class="service-features">
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span data-translate="adminFeature1">Gestão documental</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span data-translate="adminFeature2">Apoio contabilístico</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span data-translate="adminFeature3">Processamento de faturas</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span data-translate="adminFeature4">Arquivo digital</span>
+                        </div>
+                    </div>
+                    <div class="service-price">
+                        <span class="price-from" data-translate="fromPrice">A partir de</span>
+                        <span class="price-value">€129<span class="price-period">/mês</span></span>
+                    </div>
+                    <a href="#contact" class="service-btn" data-translate="learnMore">Saber Mais</a>
+                </div>
+
+                <!-- Meeting Rooms -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 data-translate="meetingRoomsServiceTitle">Salas de Reunião</h3>
+                    <p data-translate="meetingRoomsServiceDesc">Espaços profissionais para reuniões, apresentações e eventos, com equipamento audiovisual incluído.</p>
+                    <div class="service-features">
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span data-translate="meetingFeature1">Equipamento audiovisual</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span data-translate="meetingFeature2">Wi-Fi de alta velocidade</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span data-translate="meetingFeature3">Catering disponível</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span data-translate="meetingFeature4">Suporte técnico</span>
+                        </div>
+                    </div>
+                    <div class="service-price">
+                        <span class="price-from" data-translate="fromPrice">A partir de</span>
+                        <span class="price-value">€35<span class="price-period">/hora</span></span>
+                    </div>
+                    <a href="#contact" class="service-btn" data-translate="learnMore">Saber Mais</a>
+                </div>
+
+                <!-- Business Support -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 data-translate="businessSupportTitle">Apoio Empresarial</h3>
+                    <p data-translate="businessSupportDesc">Consultoria e apoio especializado para o desenvolvimento do seu negócio, desde a constituição à expansão.</p>
+                    <div class="service-features">
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span data-translate="supportFeature1">Consultoria empresarial</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span data-translate="supportFeature2">Apoio à constituição</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span data-translate="supportFeature3">Planos de negócio</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span data-translate="supportFeature4">Networking empresarial</span>
+                        </div>
+                    </div>
+                    <div class="service-price">
+                        <span class="price-from" data-translate="fromPrice">A partir de</span>
+                        <span class="price-value">€199<span class="price-period">/mês</span></span>
+                    </div>
+                    <a href="#contact" class="service-btn" data-translate="learnMore">Saber Mais</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose-us">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-translate="whyChooseTitle">Porquê Escolher a TransOffice?</h2>
+                <p data-translate="whyChooseDesc">Mais de 15 anos de experiência ao serviço das empresas portuguesas</p>
+            </div>
+            
+            <div class="benefits-grid">
+                <div class="benefit-item" data-aos="zoom-in">
+                    <div class="benefit-number">01</div>
+                    <h4 data-translate="benefit1Title">Localização Premium</h4>
+                    <p data-translate="benefit1Desc">No coração do Porto, com fácil acesso a transportes e serviços</p>
+                </div>
+                
+                <div class="benefit-item" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="benefit-number">02</div>
+                    <h4 data-translate="benefit2Title">Flexibilidade Total</h4>
+                    <p data-translate="benefit2Desc">Soluções adaptadas às suas necessidades específicas</p>
+                </div>
+                
+                <div class="benefit-item" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="benefit-number">03</div>
+                    <h4 data-translate="benefit3Title">Suporte Dedicado</h4>
+                    <p data-translate="benefit3Desc">Equipa especializada disponível para apoiar o seu negócio</p>
+                </div>
+                
+                <div class="benefit-item" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="benefit-number">04</div>
+                    <h4 data-translate="benefit4Title">Tecnologia Avançada</h4>
+                    <p data-translate="benefit4Desc">Infraestrutura moderna e sistemas digitais de última geração</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-translate="processTitle">Como Funciona</h2>
+                <p data-translate="processDesc">Um processo simples e eficiente para começar</p>
+            </div>
+            
+            <div class="process-steps">
+                <div class="step" data-aos="fade-right">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4 data-translate="step1Title">Consulta Inicial</h4>
+                        <p data-translate="step1Desc">Analisamos as suas necessidades e apresentamos as melhores soluções</p>
+                    </div>
+                </div>
+                
+                <div class="step" data-aos="fade-left" data-aos-delay="200">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4 data-translate="step2Title">Proposta Personalizada</h4>
+                        <p data-translate="step2Desc">Criamos uma proposta à medida do seu negócio e orçamento</p>
+                    </div>
+                </div>
+                
+                <div class="step" data-aos="fade-right" data-aos-delay="400">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4 data-translate="step3Title">Implementação</h4>
+                        <p data-translate="step3Desc">Configuramos todos os serviços e garantimos uma transição suave</p>
+                    </div>
+                </div>
+                
+                <div class="step" data-aos="fade-left" data-aos-delay="600">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h4 data-translate="step4Title">Suporte Contínuo</h4>
+                        <p data-translate="step4Desc">Acompanhamos o seu negócio com suporte dedicado e melhorias contínuas</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 data-translate="contactUs">Entre em Contacto</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <p>(+351) 224 073 235</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>info@transoffice.pt</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="address-info">
+                            <p>Rua Francisco Carqueja, 179, 3º Esq.</p>
+                            <p>4350-185 Porto, Portugal</p>
+                        </div>
+                    </div>
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3004.3392563778837!2d-8.629386323711392!3d41.15790797132426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd246528632c53e3%3A0x87403dd1e1148c89!2sR.%20Francisco%20Carqueja%20179%2C%204350-185%20Porto!5e0!3m2!1sen!2spt!4v1708615161010!5m2!1sen!2spt"
+                            width="100%" 
+                            height="200" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="TransOffice Location">
+                        </iframe>
+                    </div>
+                </div>
+                <form class="contact-form" action="contact_submit.php" method="POST">
+                    <input type="text" name="name" placeholder="Nome" data-translate-placeholder="name" required>
+                    <input type="email" name="email" placeholder="Email" data-translate-placeholder="email" required>
+                    <input type="tel" name="phone" placeholder="Telefone" data-translate-placeholder="phone">
+                    <select id="service_interest" name="service_interest" required>
+                        <option value="" disabled selected>Selecione uma opção</option>
+                        <option value="escritorios_privados">Escritórios Privados</option>
+                        <option value="coworking">Coworking</option>
+                        <option value="salas_reuniao">Salas de reunião</option>
+                        <option value="domiciliacao_fiscal">Domiciliação fiscal / Virtual Office</option>
+                    </select>
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function() {
+                            const select = document.getElementById('service_interest');
+                            if (select) {
+                                function updateColor() {
+                                    if (select.value === '') {
+                                        select.style.color = '#666666';
+                                    } else {
+                                        select.style.color = '#000000';
+                                    }
+                                }
+                                updateColor();
+                                select.addEventListener('change', updateColor);
+                            }
+                        });
+                    </script>
+                    <textarea name="message" placeholder="Mensagem" data-translate-placeholder="message" required></textarea>
+                    <button type="submit" class="primary-button" data-translate="send">Enviar Mensagem</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="services.html" data-translate="services">Serviços</a>
+                    <a href="spaces.html" data-translate="spaces">Espaços</a>
+                    <a href="index.html#about" data-translate="about">Sobre</a>
+                    <a href="index.html#contact" data-translate="contact">Contacto</a>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/p/TransOffice-Centro-de-Neg%C3%B3cios-do-Porto-100063738020896/"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/company/transoffice-centro-de-neg%C3%B3cios-do-porto/"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-translate="rights">&copy; 2024 TransOffice. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script type="module" src="script.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espaços - TransOffice</title>
+    <link rel="icon" sizes="192x192" href="transoffice-toplogo.png" type="image/png"> 
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="spaces.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="transoffice-logo.avif" sizes="186x50" alt="TransOffice Logo" class="logo-img">
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" data-translate="home">Home</a>
+                <a href="services.html" data-translate="services">Serviços</a>
+                <a href="spaces.html" class="active" data-translate="spaces">Espaços</a>
+                <a href="index.html#about" data-translate="about">Sobre</a>
+                <a href="index.html#contact" class="cta-button" data-translate="contact">Contacto</a>
+                <button class="language-toggle" id="languageToggle">EN</button>
+            </div>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="spaces-hero">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <!-- Removed logo on top of header as per user request -->
+                <!-- <img src="transoffice-toplogo.png" alt="TransOffice Logo" class="top-logo"> -->
+                <h1 data-translate="spacesHeroTitle">Espaços Profissionais no Centro do Porto</h1>
+                <p data-translate="spacesHeroSubtitle">Descubra o ambiente perfeito para o seu negócio crescer</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label" data-translate="satisfiedClients">Clientes Satisfeitos</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">15</span>
+                        <span class="stat-label" data-translate="yearsExperience">Anos de Experiência</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label" data-translate="support">Suporte</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>    
+    </section>
+
+    <!-- Spaces Overview -->
+    <section class="spaces-overview">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-translate="spacesOverviewTitle">Os Nossos Espaços</h2>
+                <p data-translate="spacesOverviewDesc">Soluções flexíveis e modernas para todas as suas necessidades empresariais</p>
+            </div>
+            
+            <div class="spaces-grid">
+                <!-- Private Offices -->
+                <div class="space-card" data-aos="fade-up">
+                    <div class="space-image">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Escritórios Privados">
+                        <div class="space-overlay">
+                            <div class="space-price">
+                                <span data-translate="fromPrice">A partir de</span>
+                                <strong>€150/mês</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space-content">
+                        <h3 data-translate="privateOfficesTitle">Escritórios Privados</h3>
+                        <p data-translate="privateOfficesDesc">Espaços exclusivos e totalmente equipados para a sua empresa. Ideais para equipas que necessitam de privacidade e concentração.</p>
+                        <ul class="space-features">
+                            <li><i class="fas fa-check"></i> <span data-translate="feature1">Mobiliário moderno incluído</span></li>
+                            <li><i class="fas fa-check"></i> <span data-translate="feature2">Internet de alta velocidade</span></li>
+                            <li><i class="fas fa-check"></i> <span data-translate="feature3">Acesso 24/7</span></li>
+                            <li><i class="fas fa-check"></i> <span data-translate="feature4">Salas de reunião incluídas</span></li>
+                        </ul>
+                        <a href="#contact" class="space-cta" data-translate="bookNow">Reservar Agora</a>
+                    </div>
+                </div>
+
+                <!-- Coworking -->
+                <div class="space-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="space-image">
+                        <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Coworking">
+                        <div class="space-overlay">
+                            <div class="space-price">
+                                <span data-translate="fromPrice">A partir de</span>
+                                <strong>€75/mês</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space-content">
+                        <h3 data-translate="coworkingTitle">Coworking</h3>
+                        <p data-translate="coworkingDesc">Ambiente colaborativo e dinâmico para profissionais independentes e pequenas equipas. Networking e flexibilidade garantidos.</p>
+                        <ul class="space-features">
+                            <li><i class="fas fa-check"></i> <span data-translate="feature5">Ambiente colaborativo</span></li>
+                            <li><i class="fas fa-check"></i> <span data-translate="feature6">Networking profissional</span></li>
+                            <li><i class="fas fa-check"></i> <span data-translate="feature7">Flexibilidade de horários</span></li>
+                            <li><i class="fas fa-check"></i> <span data-translate="feature8">Café e snacks incluídos</span></li>
+                        </ul>
+                        <a href="#contact" class="space-cta" data-translate="bookNow">Reservar Agora</a>
+                    </div>
+                </div>
+
+                <!-- Meeting Rooms -->
+                <div class="space-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="space-image">
+                        <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Salas de Reunião">
+                        <div class="space-overlay">
+                            <div class="space-price">
+                                <span data-translate="fromPrice">A partir de</span>
+                                <strong>€25/hora</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space-content">
+                        <h3 data-translate="meetingRoomsTitle">Salas de Reunião</h3>
+                        <p data-translate="meetingRoomsDesc">Espaços profissionais para reuniões, apresentações e eventos. Equipamento audiovisual de última geração incluído.</p>
+                        <ul class="space-features">
+                            <li><i class="fas fa-check"></i> <span data-translate="feature9">Equipamento audiovisual</span></li>
+                            <li><i class="fas fa-check"></i> <span data-translate="feature10">Capacidade até 20 pessoas</span></li>
+                            <li><i class="fas fa-check"></i> <span data-translate="feature11">Catering disponível</span></li>
+                            <li><i class="fas fa-check"></i> <span data-translate="feature12">Suporte técnico</span></li>
+                        </ul>
+                        <a href="#contact" class="space-cta" data-translate="bookNow">Reservar Agora</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Amenities Section -->
+    <section class="amenities">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-translate="amenitiesTitle">Comodidades Incluídas</h2>
+                <p data-translate="amenitiesDesc">Tudo o que precisa para trabalhar com máxima produtividade</p>
+            </div>
+            
+            <div class="amenities-grid">
+                <div class="amenity-item" data-aos="zoom-in">
+                    <div class="amenity-icon">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <h4 data-translate="amenity1Title">Internet Fibra</h4>
+                    <p data-translate="amenity1Desc">Conexão de alta velocidade garantida</p>
+                </div>
+                
+                <div class="amenity-item" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="amenity-icon">
+                        <i class="fas fa-coffee"></i>
+                    </div>
+                    <h4 data-translate="amenity2Title">Café Premium</h4>
+                    <p data-translate="amenity2Desc">Café e bebidas disponíveis 24/7</p>
+                </div>
+                
+                <div class="amenity-item" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="amenity-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h4 data-translate="amenity3Title">Estacionamento</h4>
+                    <p data-translate="amenity3Desc">Lugares reservados para clientes</p>
+                </div>
+                
+                <div class="amenity-item" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="amenity-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h4 data-translate="amenity4Title">Segurança 24/7</h4>
+                    <p data-translate="amenity4Desc">Acesso controlado e vigilância</p>
+                </div>
+                
+                <div class="amenity-item" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="amenity-icon">
+                        <i class="fas fa-print"></i>
+                    </div>
+                    <h4 data-translate="amenity5Title">Centro de Impressão</h4>
+                    <p data-translate="amenity5Desc">Impressão, digitalização e cópias</p>
+                </div>
+                
+                <div class="amenity-item" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="amenity-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h4 data-translate="amenity6Title">Área Social</h4>
+                    <p data-translate="amenity6Desc">Espaço para relaxar e networking</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Virtual Tour Section -->
+    <section class="virtual-tour">
+        <div class="container">
+            <div class="tour-content">
+                <div class="tour-text" data-aos="fade-right">
+                    <h2 data-translate="tourTitle">Faça um Tour Virtual</h2>
+                    <p data-translate="tourDesc">Explore os nossos espaços no conforto da sua casa. Descubra cada detalhe dos nossos escritórios modernos e bem equipados.</p>
+                    <div class="tour-features">
+                        <div class="tour-feature">
+                            <i class="fas fa-eye"></i>
+                            <span data-translate="tour360">Visão 360°</span>
+                        </div>
+                        <div class="tour-feature">
+                            <i class="fas fa-mouse-pointer"></i>
+                            <span data-translate="tourInteractive">Interativo</span>
+                        </div>
+                        <div class="tour-feature">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span data-translate="tourMobile">Compatível Mobile</span>
+                        </div>
+                    </div>
+                    <a href="#" class="tour-btn" data-translate="startTour">Iniciar Tour</a>
+                </div>
+                <div class="tour-video" data-aos="fade-left">
+                    <div class="video-placeholder">
+                        <i class="fas fa-play-circle"></i>
+                        <span data-translate="watchVideo">Assistir Vídeo</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 data-translate="contactUs">Entre em Contacto</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <p>(+351) 224 073 235</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>info@transoffice.pt</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="address-info">
+                            <p>Rua Francisco Carqueja, 179, 3º Esq.</p>
+                            <p>4350-185 Porto, Portugal</p>
+                        </div>
+                    </div>
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3004.3392563778837!2d-8.629386323711392!3d41.15790797132426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd246528632c53e3%3A0x87403dd1e1148c89!2sR.%20Francisco%20Carqueja%20179%2C%204350-185%20Porto!5e0!3m2!1sen!2spt!4v1708615161010!5m2!1sen!2spt"
+                            width="100%" 
+                            height="200" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="TransOffice Location">
+                        </iframe>
+                    </div>
+                </div>
+                <form class="contact-form" action="contact_submit.php" method="POST">
+                    <input type="text" name="name" placeholder="Nome" data-translate-placeholder="name" required>
+                    <input type="email" name="email" placeholder="Email" data-translate-placeholder="email" required>
+                    <input type="tel" name="phone" placeholder="Telefone" data-translate-placeholder="phone">
+  <select id="service_interest" name="service_interest" required>
+    <option value="" disabled selected>Selecione uma opção</option>
+    <option value="escritorios_privados">Escritórios Privados</option>
+    <option value="coworking">Coworking</option>
+    <option value="salas_reuniao">Salas de reunião</option>
+    <option value="domiciliacao_fiscal">Domiciliação fiscal / Virtual Office</option>
+  </select>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const select = document.getElementById('service_interest');
+      if (select) {
+        function updateColor() {
+          if (select.value === '') {
+            select.style.color = '#666666';
+          } else {
+            select.style.color = '#000000';
+          }
+        }
+        updateColor();
+        select.addEventListener('change', updateColor);
+      }
+    });
+  </script>
+                    <textarea name="message" placeholder="Mensagem" data-translate-placeholder="message" required></textarea>
+                    <button type="submit" class="primary-button" data-translate="send">Enviar Mensagem</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="transoffice-logo.avif" alt="TransOffice Logo" class="logo-img">
+                </div>
+                <div class="footer-links">
+                    <a href="services.html" data-translate="services">Serviços</a>
+                    <a href="spaces.html" data-translate="spaces">Espaços</a>
+                    <a href="index.html#about" data-translate="about">Sobre</a>
+                    <a href="index.html#contact" data-translate="contact">Contacto</a>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/p/TransOffice-Centro-de-Neg%C3%B3cios-do-Porto-100063738020896/"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/company/transoffice-centro-de-neg%C3%B3cios-do-porto/"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-translate="rights">&copy; 2024 TransOffice. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script type="module" src="script.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+    </script>
+</body>
+</html>
